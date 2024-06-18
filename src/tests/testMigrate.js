@@ -1,0 +1,15 @@
+
+const sequelize = require('../utils/connection');
+
+const testMigrate = async () => {
+  try {
+    sequelize.sync({ force: true });
+    console.log("DB reset 👌😊");
+    process.exit()
+
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+testMigrate();
