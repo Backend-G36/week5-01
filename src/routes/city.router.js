@@ -3,11 +3,11 @@ const express = require('express');
 
 const routerCity = express.Router();
 
-routerCity.route('/')
+routerCity.route('/') //! /api/v1/cities 👌
   .get(getAll)
   .post(create);
 
-routerCity.route('/:id')
+routerCity.route('/:id') //! /api/v1/cities/4
   .get(getOne)
   .delete(remove)
   .put(update);
